@@ -42,8 +42,22 @@ This file contains environment variables for MySQL and Symfony.
 ### 3. Build and Start Containers
 
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
+
+> ✅ **Note**: `docker-entrypoint.sh` will install composer dependencies, run migrations and run initial data import.
+
+---
+
+## Useful commands
+
+### 1. Rerun the Meteorology Station data import
+
+```bash
+docker compose exec -it php bin/console app:import-meteorology-stations
+```
+
+> ✅ **Note**: in real case scenario where data change is expected - I would add this to a CRON.
 
 ---
 
