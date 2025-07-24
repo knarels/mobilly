@@ -84,4 +84,6 @@ Once running:
 
 🔗 Visit: [http://localhost:8000](http://localhost:8000)
 
+🔗 Visit: [http://localhost:8000/api/doc](http://localhost:8000/api/doc) for API testing and documentation
+
 ---
