@@ -6,20 +6,6 @@
 
 ---
 
-## 🧱 Project Structure
-
-```
-project-root/
-├── docker-compose.yml
-├── Dockerfile
-├── .env            # auto-generated from .env.example
-├── .env.example    # environment configuration template
-├── src/            # Symfony source code
-└── ...
-```
-
----
-
 ## 🚀 Setup Instructions
 
 ### 1. Clone the Repository
@@ -37,7 +23,7 @@ cp .env.example .env
 
 This file contains environment variables for MySQL and Symfony.
 
-> ✅ **Note**: `.env` is gitignored to keep sensitive values local.
+> ✅ **Note**: `.env` is gitignored to keep sensitive values local. For simplicity the token is added to `.env.example`.
 
 ### 3. Build and Start Containers
 

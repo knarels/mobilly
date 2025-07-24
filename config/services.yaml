@@ -23,3 +23,7 @@ services:
     App\Security\ApiKeyAuthenticator:
         arguments:
             $apiKey: '%api_key%'
+
+    App\EventListener\RateLimitListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, priority: 10 }
