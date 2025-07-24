@@ -22,12 +22,7 @@ class MeteorologyStationRepository extends ServiceEntityRepository
 
     public function findOneByStationId(string $stationId): ?MeteorologyStation
     {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.stationId = :stationId')
-            ->setParameter('stationId', $stationId)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $this->findOneBy(['stationId' => $stationId]);
     }
 
     public function createOrUpdateFromDto(MeteorologyStationDto $dto, bool $flush = false): MeteorologyStation

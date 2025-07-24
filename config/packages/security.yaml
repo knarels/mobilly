@@ -1,0 +1,14 @@
+security:
+    providers:
+        dummy_provider:
+            memory: null
+
+    firewalls:
+        api:
+            pattern: ^/api/
+            stateless: true
+            custom_authenticator: App\Security\ApiKeyAuthenticator
+            provider: dummy_provider
+
+    access_control:
+        - { path: ^/api/, roles: ROLE_API }

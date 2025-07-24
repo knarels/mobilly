@@ -49,7 +49,7 @@ docker compose up -d --build
 
 ---
 
-## Useful commands
+## Commands
 
 ### 1. Rerun the Meteorology Station data import
 
@@ -58,6 +58,23 @@ docker compose exec -it php bin/console app:import-meteorology-stations
 ```
 
 > ✅ **Note**: in real case scenario where data change is expected - I would add this to a CRON.
+
+---
+
+### 2. API request example: station list
+
+```bash
+docker compose exec -it php curl -X GET http://localhost:8000/api/stations -H "Authorization: Bearer supersecretkey123" -H "Accept: application/json"
+```
+
+---
+
+### 3. API request example: station details
+
+```bash
+docker compose exec -it php curl -X GET http://localhost:8000/api/stations/SIGULDA -H "Authorization: Bearer supersecretkey123" -H "Accept: application/json"
+
+```
 
 ---
 
